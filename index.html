@@ -27,27 +27,12 @@
       display: none;
     }
 
-    @media(max-width:510px) {
-      .nbsp {
-        display: none;
-      }
-
-      .br {
-        display: contents;
-      }
-
-      .whoami {
-        text-align: left;
-
-      }
-    }
-
     .whoami:hover {
       cursor: pointer;
       background: silver;
     }
 
-    ₩ .whoami span:hover {
+    .whoami span:hover {
       cursor: pointer;
       background: silver;
 
@@ -56,30 +41,48 @@
     #blog:hover {
       background: silver;
     }
+
+    @media(max-width:510px) {
+      .nbsp {
+        display: none;
+      }
+
+      .whoami {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .br {
+        display: inline;
+      }
+    }
   </style>
 
 </head>
 
 <body>
-  <class class="whoami">
-    <span id="blog"><a a href="https://blog.naver.com/hellkite1106">W</a></span>
-    <span id="gallery"><a a href="https://github.com/Po-ser">H</a></span>
-    <span id="youtube"><a href="https://www.youtube.com/channel/UCOoELzcf4pH1ukKUIB5gwTA">O</a></span>
-    <div class="nbsp">&nbsp;&nbsp;</div>
-    <div class="br">
-      <P></P>
+  <div class="whoami">
+    <div class="block">
+      <span id="blog"><a a href="https://blog.naver.com/hellkite1106">W</a></span>
+      <span id="gallery"><a a href="https://github.com/Po-ser">H</a></span>
+      <span id="youtube"><a href="https://www.youtube.com/channel/UCOoELzcf4pH1ukKUIB5gwTA">O</a></span>
     </div>
-    <span id="brunch"><a a href="https://brunch.co.kr/@iamliam">A</a></span>
-    <span id="mmc"> <a a href="https://smartstore.naver.com/mailmailcloset">M</a></span>
-    <div class="nbsp">&nbsp;&nbsp;</div>
-    <div class="br">
-      <P></P>
+    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
+    <div class="block">
+      <span id="brunch"></span><a a href="https://brunch.co.kr/@iamliam">A</a></span>
+      <span id="mmc"><a a href="https://smartstore.naver.com/mailmailcloset">M</a></span>
     </div>
-    <span id="insta"><a a href="https://www.instagram.com/gyu_brother/">I</a></span>
-    <div class="nbsp">&nbsp;&nbsp;</div>
-    <div class="br">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <span id="reload"><a a href="hhttps://po-ser.github.io/whoami/">?</a></span>
-  </class>
+    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
+    <div class="block">
+      <span id="insta"><a a href="https://www.instagram.com/gyu_brother/">I</a></span>
+    </div>
+    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
+    <div class="block">
+      <div class="br">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <span id="reload"><a a href="hhttps://po-ser.github.io/whoami/">?</a></span>
+    </div>
+  </div>
+
 
 
 </body>
