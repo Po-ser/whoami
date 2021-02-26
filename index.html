@@ -10,13 +10,17 @@
   <style>
     .whoami {
       display: flex;
-      padding: 30px;
       position: absolute;
       left: 50%;
       top: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
 
-      transform: translate(-50%, -50%)
+      transition: all .2s ease-in-out;
+    }
+
+    .whoami:hover {
+      transform: translate(-50%, -50%) scale(1.2);
     }
 
     a {
@@ -26,37 +30,32 @@
       color: black;
     }
 
+
+
     .br {
       display: none;
     }
 
-    .whoami:hover {
-      cursor: pointer;
-      background: silver;
-    }
+    @media(min-width:510px) {
 
-    .whoami span:hover {
-      cursor: pointer;
-      background: silver;
-
-    }
-
-    #blog:hover {
-      background: silver;
+      #폰 {
+        display: none;
+      }
     }
 
     @media(max-width:510px) {
-      .nbsp {
+
+      #컴 {
         display: none;
       }
 
       .whoami {
         flex-direction: column;
-        text-align: left;
+        text-align: right;
       }
 
-      .br {
-        display: inline;
+      .block {
+        text-align: left;
       }
     }
   </style>
@@ -64,30 +63,51 @@
 </head>
 
 <body>
-  <div class="whoami">
-    <div class="block">
-      <span id="blog"><a a href="https://blog.naver.com/hellkite1106">W</a></span>
-      <span id="gallery"><a a href="https://github.com/Po-ser">H</a></span>
-      <span id="youtube"><a href="https://www.youtube.com/channel/UCOoELzcf4pH1ukKUIB5gwTA">O</a></span>
-    </div>
-    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
-    <div class="block">
-      <span id="brunch"></span><a a href="https://brunch.co.kr/@iamliam">A</a></span>
-      <span id="mmc"><a a href="https://smartstore.naver.com/mailmailcloset">M</a></span>
-    </div>
-    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
-    <div class="block">
-      <span id="insta"><a a href="https://www.instagram.com/gyu_brother/">I</a></span>
-    </div>
-    <div class="nbsp">&nbsp;&nbsp;&nbsp;</div>
-    <div class="block">
-      <div class="br">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-      <span id="reload"><a a href="hhttps://po-ser.github.io/whoami/">?</a></span>
-    </div>
-  </div>&nbsp;&nbsp;
+  <div id="폰">
+    <div class="whoami">
+      <div class="block">
+        <a a href="https://po-ser.github.io/whoami/">¿</a>
+      </div>
 
+      <div class="block1">
+        <a a href="https://www.instagram.com/gyu_brother/">!</a>
+      </div>
 
+      <div class="block2">
+        <a a href="https://brunch.co.kr/@iamliam">W</a>
+        <a a href="https://smartstore.naver.com/mailmailcloset">V</a>
+      </div>
+
+      <div class="block3">
+        <a a href="https://blog.naver.com/hellkite1106">O</a>
+        <a a href="https://github.com/Po-ser">H</a>
+        <a href="https://www.youtube.com/channel/UCOoELzcf4pH1ukKUIB5gwTA">M</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="컴">
+    <div class="whoami">
+      <div class="block">
+        <a a href="https://blog.naver.com/hellkite1106" class="blog">W</a>
+        <a a href="https://github.com/Po-ser" class="git">H</a>
+        <a href="https://www.youtube.com/channel/UCOoELzcf4pH1ukKUIB5gwTA " class="youtube">O</a>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="block">
+        <a a href="https://brunch.co.kr/@iamliam" class="brunch">A</a>
+        <a a href="https://smartstore.naver.com/mailmailcloset" class="mmc">M</a>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="block">
+        <a a href="https://www.instagram.com/gyu_brother/" class="insta">I</a>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="block">
+        <a a href="hhttps://po-ser.github.io/whoami/" class="reload">?</a>
+      </div>
+    </div>
+  </div>
 
 </body>
 
